@@ -9,73 +9,299 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="16dp">
 
+        <!-- Title & Subtitle -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Halo, kenalan yuk!"
+            android:text="Biodata Diri"
             android:textColor="#202124"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="18dp"
-            android:text="Biodata singkat tentang diri saya"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="[Personal Profile]"
             android:textColor="#666666"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
-        <LinearLayout
+        <!-- Grid Container -->
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:alignmentMode="alignBounds"
+            android:columnCount="2"
+            android:useDefaultMargins="false">
 
-            <TextView
-                android:layout_width="match_parent"
+            <!-- Profile Header Card (Spans 2 columns) -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="BIODATA DIRI"
-                android:textColor="#536DFE"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="2"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-            <TextView
-                android:layout_width="match_parent"
+                <!-- Avatar Placeholder Box -->
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_badge_wireframe"
+                    android:gravity="center"
+                    android:text="[FOTO]"
+                    android:textColor="#555555"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge_wireframe"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="LAYOUT 1 - BIO"
+                        android:textColor="#444444"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Arvia Marthina Keliduan"
+                        android:textColor="#202124"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Mahasiswa System Information - Telkom University"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Card 1: TTL -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Enrico Steven Ernest"
-                android:textColor="#202124"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-            <TextView
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tempat, Tgl Lahir"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Ambon, 18 Maret 2005"
+                    android:textColor="#202124"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 2: Status -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Mahasiswa Semester 7 - Telkom University Jakarta"
-                android:textColor="#666666"
-                android:textSize="14sp" />
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp" android:text="Tempat, Tanggal Lahir" android:textColor="#777777" android:textSize="13sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:text="[Bekasi, 2 Juni 2004]" android:textColor="#202124" android:textSize="16sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp" android:text="Domisili" android:textColor="#777777" android:textSize="13sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:text="Bekasi" android:textColor="#202124" android:textSize="16sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp" android:text="Email" android:textColor="#777777" android:textSize="13sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp" android:text="enricosteven8@gmail.com" android:textColor="#202124" android:textSize="16sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp" android:text="Tentang saya" android:textColor="#777777" android:textSize="13sp" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Aku Suka Makan Ayam" android:textColor="#202124" android:textSize="16sp" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status / Semester"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:text="Halo Semuanya..."
-            android:textColor="#888888"
-            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Aktif (Semester 7)"
+                    android:textColor="#202124"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 3: Domisili -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Domisili"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Bekasi, Indonesia"
+                    android:textColor="#202124"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 4: Email -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email Contact"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="isi email"
+                    android:textColor="#202124"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 5: Perguruan Tinggi -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perguruan Tinggi"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Telkom University Jakarta"
+                    android:textColor="#202124"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 6: Hobi & Minat -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hobi &amp; Minat"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Isi hobi dan minat"
+                    android:textColor="#202124"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Card 7 (Spans 2 columns): About / Summary -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="2"
+                android:layout_gravity="fill"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card_wireframe"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang Saya (Summary)"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Halo! Saya Arvia, mahasiswa Sistem Informasi yang menyukai dunia pengembangan aplikasi."
+                    android:textColor="#202124"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </GridLayout>
+
     </LinearLayout>
 </ScrollView>
