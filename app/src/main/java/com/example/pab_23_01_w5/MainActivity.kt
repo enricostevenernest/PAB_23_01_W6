@@ -12,8 +12,8 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : ComponentActivity() {
     private val navigationItems = listOf(
         NavigationItem(R.id.nav_biodata, R.layout.layout_biodata),
-        NavigationItem(R.id.nav_tentang, R.layout.layout_tentang),
-        NavigationItem(R.id.nav_about, R.layout.layout_about),
+        NavigationItem(R.id.nav_tentang, R.layout.layout_skillpengalaman),
+        NavigationItem(R.id.nav_about, R.layout.layout_rencana),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
